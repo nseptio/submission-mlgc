@@ -32,7 +32,7 @@ async function postPredictHandler(request, h) {
 
 async function getHistoriesHandler(request, h) {
   const db = new Firestore();
-  const userHistoryCollection = db.collection('prediction');
+  const userHistoryCollection = db.collection('predictions');
   const querySnapshot = await userHistoryCollection.get();
   const histories = [];
   querySnapshot.forEach(doc => {
